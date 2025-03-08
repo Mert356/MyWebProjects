@@ -39,9 +39,9 @@ cd javascript_projects
 
 # Open the project in a web browser
 # (Simply open the HTML file in your preferred browser)
-
+```
 ## Contributing
-
+```bash
 # Fork the repository on GitHub
 
 # Create a new branch for your feature
@@ -54,9 +54,10 @@ git commit -m "Added a new project"
 git push origin feature-newProject
 
 # Create a Pull Request on GitHub
-
+```
 
 ## License
+```bash
 # This project is licensed under the MIT License.
 # For more details, check the LICENSE file.
-
+```
