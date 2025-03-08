@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akdeniz Üniversitesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/üni-logo.png">
+</head>
+<body>
+    <div id="header">
+        <div class="üniLogo">
+            <img src="./images/üni-logo.png" alt="üniversite Logo" id="logo">
+        </div>
+        <p id="headerText">Diş Hekimliği Fakültesi Randevu Sistemi</p>
+        <button type="submit" id="sideBarButton">
+            <div class="buttonLines"></div>
+            <div class="buttonLines"></div>
+            <div class="buttonLines"></div>
+        </button>
+        <div id="drawer" class="drawer">
+            <h1>Merhaba, Mert ÇELİK</h1>
+            <button class="drawerButton" id="OurDoctors">Doktorlarımız</button>
+            <button class="drawerButton" id="pastAppointments">Geçmiş Randevularım</button>
+            <button class="drawerButton" id="futureAppointments">Gelecek Randevularım</button>
+            <p id="info">&copy Done by Mert Çelik</p>
+        </div>
+    </div>
+    <main>
+        <div class="leftSideBar">
+            <img src="./images/person.png" alt="photograph" id="photo">
+            <div class="informations">
+                <p class="name">İsim: Mert Çelik</p>
+                <p class="tc">TC Kimlik No: 12345678910</p>
+                <p class="lastLoginDate">Son Giriş Tarihi: 2024-12-06 14:32</p>
+            </div>
+        </div>
+        <div class="rightSideBar">
+            <div class="filter">
+                <label for="departments">Klinik Seçiniz: </label>
+                <select name="department" id="departments">
+                    <option value="0"  selected>Lütfen bir klinik seçiniz</option>
+                </select>
+                <label for="doctors">Doktor Seçiniz: </label>
+                <select name="doctor" id="doctors">
+                    <option value="0"  selected>Lütfen bir Doktor seçiniz</option>
+                </select>
+                <label for="hours">Saat Seçiniz: </label>
+                <select name="hour" id="hours">
+                    <option value="0"  selected>Lütfen bir saat seçiniz</option>
+                </select>
+            </div>
+            <div class="appointmentContainer">
+                <div id="daysContainer">
+                    <button type="submit" id="leftButton" class="changeDay">&lt</button>
+                    <div id="days"></div>
+                    <button type="submit" id="rightButton" class="changeDay">&gt</button>
+                </div>
+                <div id="appointments">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+            <p class="warnings">1- Lütfen Aldığınız Randevularınızı Takip Ediniz.</p>
+            <p class="warnings">2- Randevusuna gelmeyen hastalar süreklilik halinde, sistem tarafından randevu alımları engellenecektir.</p>
+            <p class="warnings">3- Bu siteye yapılan tüm erişimler kayıt altına alınmaktadır.</p>
+        <a target="_blank" href="https://www.google.com.tr/maps/place/Akdeniz+%C3%9Cniversitesi+Di%C5%9F+Hekimli%C4%9Fi+Fak%C3%BCltesi/@36.8995885,30.6567018,17z/data=!4m6!3m5!1s0x14c391d416c8244f:0x19f1cd75e12a9ebd!8m2!3d36.8995885!4d30.6592767!16s%2Fg%2F1q67t0970?hl=tr&entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D">
+            <nav>
+                📌 P.K.10 Dumlupınar Bulvarı Kampüs, 07058 Konyaaltı/Antalya
+            </nav>
+        </a>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

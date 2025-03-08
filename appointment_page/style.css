@@ -1,0 +1,355 @@
+/* Genel sıfırlama */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button{
+  cursor: pointer;
+}
+/************************************************/
+/* Light Mode Renkleri */
+:root {
+  --background: #ffffff;
+  --text-color: #FFFFFF;
+  --primary: #0E2245;
+  --secondary: #F47424;
+  --border: #E0E0E0;
+  --hover2: #1C3766;
+  --hover: #3A7CA5;
+}
+
+/* Dark Mode renkleri */
+[data-theme="dark"] {
+  --background: #121212;
+  --text-color: #E0E0E0;
+  --primary: #1A2A44;
+  --secondary: #F47424;
+  --border: #2A2A2A;
+  --hover: #64B5F6;
+}
+
+body{
+    background-color: var(--primary);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-gap: 10px;
+}
+/************************************************/
+/*Header*/
+#header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    border-bottom: 3px solid var(--secondary);
+}
+#headerText{
+    font-size: 30px;
+    color: var(--text-color);
+}
+#logo{
+    height: 100px;
+    width: 100px;
+}
+.üniLogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+}
+#sideBarButton{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+}
+.buttonLines{
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--secondary);
+}
+h1{
+  text-align: center;
+}
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: #0E2245;
+  border-left: 3px solid var(--secondary);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+#info{
+  margin-top: auto;
+}
+.drawerButton{
+  width: 100%;
+  height: 50px;
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 20px;
+}
+.drawerButton:hover{
+  background-color: var(--hover);
+}
+.drawer.open {
+  right: 0;
+}
+/*-----------------------------------*/
+/*Footer*/
+footer{
+    grid-area: footer;
+    border-top: 3px solid var(--secondary);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+a:hover{
+    text-decoration: underline;
+}
+.warnings{
+  font-size: 12px;
+  font-weight: bold;
+}
+/*-----------------------------------*/
+/*main*/
+p{
+  color: var(--text-color);
+}
+main{
+    grid-area: main;
+    padding: 5px;
+    border-radius: 10px;
+    gap: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--secondary);
+    border-top: 3px solid var(--secondary);
+}
+/*-----------------------------------*/
+/*Left Part*/
+#photo{
+  height: 150px;
+}
+.leftSideBar{
+  border-radius: 10px;
+  height: 100%;
+  width: 20%;
+  gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--hover);
+}
+.informations{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/*-----------------------------------*/
+/*Right Part*/
+.rightSideBar{
+  border-radius: 10px;
+  height: 100%;
+  width: 80%;
+  background-color: var(--hover);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+}
+    /*Filtreleme kısmı*/
+      .filter{
+        height: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: left;
+        flex-direction: column;
+        margin-top: 30px;
+        padding: 5px;
+        gap: 10px;
+      }
+      label{
+        color: var(--text-color);
+      }
+      select{
+        height: 40px;
+        width: 100%;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        background-color: var(--primary);
+        color: var(--text-color);
+      }
+      select:focus{
+        outline: none;
+      }
+      option{
+        color: var(--text-color);
+      }
+    /*--------------------------------------*/
+.appointmentContainer{
+  height: 100%;
+  width: 80%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+  'daysContainer'
+  'appointments';
+}
+      /*Gün seçme*/
+      #daysContainer{
+        grid-area: daysContainer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        padding: 5px;
+        gap: 10px;
+      }
+      #days{
+        height: 100%;
+        width: 100%;
+        gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+      }
+      .day{
+        outline: none;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: var(--primary);
+        color: var(--text-color);
+      }
+      .day:focus{
+        background-color: var(--hover2);
+      }
+      .day:hover{
+        background-color: var(--hover2) ;
+      }
+      .changeDay{
+        height: 100%;
+        width: 40px;
+        font-size: 40px;
+        padding: 5px;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--primary);
+        color: var(--text-color);
+      }
+      .changeDay:hover{
+        background-color: var(--hover2);
+      }
+      /*---------------------------------*/
+#appointments{
+  grid-area: appointments;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px 50px 5px 50px;
+  gap: 10px;
+  overflow-y: auto;
+  height: 300px;
+}
+    /*Apointment card styleı*/
+    .appointmentCard{
+      width: 100%;
+      height: 100px;
+      background-color: var(--primary);
+      border-radius: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
+    }
+    #doctorImage{
+      height: 100%;
+    }
+    #appointmentButton{
+      height: 50px;
+      width: 150px;
+      font-size: 25px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--secondary);
+      color: var(--text-color);
+      margin-left: auto;
+      margin-right: 30px;
+    }
+    #appointmentButton:hover{
+      background-color: var(--hover);
+    }
+    
+
+/*-----------------------------------*/
