@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <p>Pomofocus</p>
+        <div class="buttons">
+            <button type="submit" class="topButtons">Report</button>
+            <button type="submit" class="topButtons">Setting</button>
+            <button type="submit" class="topButtons">Sign In</button>
+            <button type="submit" class="topButtons">Others</button>
+        </div>
+    </div>
+    <div class="hourContainer">
+        <div id="buttons">
+            <button type="submit" class="topButtons" id="pomodoro">Pomodoro</button>
+            <button type="submit" class="topButtons" id="shortBreak">Short Break</button>
+            <button type="submit" class="topButtons" id="longBreak">Long Break</button>
+        </div>
+        <p id="hour">25:00</p>
+        <button type="submit" id="start">Start</button>
+        <button type="submit" id="skip"><img src="skip.png" alt=""></button>
+    </div>
+    <p id="count">#1</p>
+    <p id="writing">Time to focus</p>
+    <div id="tasks">
+        <div class="task" id="task1">
+            <p>Task1</p>
+            <button type="submit" id="delete">Delete</button>
+        </div>
+    </div>
+    <button type="submit" id="addTask">Add Task</button>
+    <script src="index.js"></script>
+</body>
+</html>

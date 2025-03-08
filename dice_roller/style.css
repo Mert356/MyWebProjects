@@ -1,0 +1,54 @@
+html,
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: aquamarine;
+  gap: 20px;
+}
+#main {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+input {
+  background-color: blanchedalmond;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  width: 175px;
+}
+input:active {
+  border: 0;
+}
+button {
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+}
+button:hover {
+  background-color: deepskyblue;
+}
+button:active {
+  background-color: cornflowerblue;
+}
+img {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 14px;
+}
+#images {
+  gap: 10px;
+  width: 400px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

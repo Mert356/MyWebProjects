@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Başlangıç ekranı -->
+    <div id="starting">
+        <button id="start">Start</button>
+    </div>
+    
+    <!-- Sorular ve cevaplar ekranı -->
+    <div id="questionContainer" style="display: none;">
+        <div class="jokers">
+            <button class="joker">50 : 50</button>
+            <button class="joker"><img src="spectator.png" alt=""></button>
+            <button class="joker"><img src="telephone.png" alt=""></button>
+            <button class="joker"><img src="2x.png" alt=""></button>
+        </div>
+        <div id="loader-container">
+            <div id="loader-bar"></div>
+        </div>
+        <div id="question"></div>
+        <div type="submit" id="answers">
+            <button class="answer" id="answer1"></button>
+            <button class="answer" id="answer2"></button>
+            <button class="answer" id="answer3"></button>
+            <button class="answer" id="answer4"></button>
+        </div>
+    </div>
+    
+    <div id="prices">
+        <div class="price" id="price13">13. Soru: 5.000.000 TL</div>
+        <div class="price" id="price12">12. Soru: 1.000.000 TL</div>
+        <div class="price" id="price11">11. Soru: 500.000 TL</div>
+        <div class="price" id="price10">10. Soru: 300.000 TL</div>
+        <div class="price" id="price9">9. Soru: 200.000 TL</div>
+        <div class="price" id="price8">8. Soru: 100.000 TL</div>
+        <div class="price" id="price7">7. Soru: 50.000 TL</div>
+        <div class="price" id="price6">6. Soru: 30.000 TL</div>
+        <div class="price" id="price5">5. Soru: 20.000 TL</div>
+        <div class="price" id="price4">4. Soru: 10.000 TL</div>
+        <div class="price" id="price3">3. Soru: 7.500 TL</div>
+        <div class="price" id="price2">2. Soru: 5.000 TL</div>
+        <div class="price" id="price1">1. Soru: 2.000 TL</div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
